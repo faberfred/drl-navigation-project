@@ -1,1 +1,1 @@
-# Deep-Reinforcement-Lerning Projects
+# Deep-Reinforcement-Learning Projects
