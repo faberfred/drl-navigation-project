@@ -20,13 +20,44 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
-### Settings
+### Setup
+The setup description applies to *Linux Ubuntu 18.04 / 20.04* with pre-installed *Anaconda*.
 
-The project is implemented in `python 3.6` within `jupyter notebook`. 
+Create and activate a new conda environment named *drlnd* with *Python 3.6*:
+```python
+conda create --name drlnd python=3.6
+conda activate drlnd
+```
+Clone the *Udacity Deep-Reinforcement-Learning-Nanodegree* GitHub repository:
+```python
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+```
+Move into the python folder and install several dependencies:
+```python
+cd deep-reinforcement-learning/python
+pip install .
+```
+This will install among others *unityagents* and *tensorflow 1.7.1*.
+
+Now install the latest *PyTorch* version together with the *CudaToolkit 10.1*:
+```python
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+```
+
+To use *Jupyter Notebook* run the following code:
+```python
+conda install ipykernel jupyter
+jupyter notebook
+```
+
+The Unity environment is provided by Udacity and can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
+
+#### Setup conclusion
+
+The project is implemented in `python 3.6` within a `jupyter notebook`. 
 
 * ML framework: **`Pytorch 1.4.0`**
 * CUDA: **`CUDAToolkit 10.1`**
 * Operating system: **`ubuntu 18.04`**
-* Unity version: **`Unity 2019.3`** 
 * Unity environment: **`Banana_Linux/Banana.x86_64`** provided by Udacity
 
