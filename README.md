@@ -6,11 +6,25 @@
 
 ### Introduction & goal of the project
 
-The objective of this project is to *implement* and *compare* different agents (with different value functions) that navigate and collect bananas in a large, square world. The Unity environment is provided by [**Udacity**](https://www.udacity.com/). This is an extension of a project of the [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893).
+The objective of this project is to *implement* and *compare* two different agents with different value functions, that navigate and collect bananas in a large, square *Unity* world. 
 
 ![Trained Agent][image1]
 
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
+Agent one is learning from 37 different signals provided by the environment.
+Agent two is learning from the raw.
+The Unity environments are provided by [Udacity](https://www.udacity.com/). 
+The environment for learning from *input signals* can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
+The environment for learning from *raw pixels* can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip).
+This project is an extension of a project of the [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893).
+
+The state-space for agent one (learning from signals) has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  
+
+The state space for agent two (learning from raw pixels) has 3 x 84 x 84 x 4:
+- One input image is of size 84 x 84 pixels
+- Each input image has three color layers (RGB)
+- To get the motion information four images are stacked together
+
+Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
 - **`0`** - move forward.
 - **`1`** - move backward.
 - **`2`** - turn left.
@@ -39,7 +53,7 @@ pip install .
 ```
 This will install among others *unityagents* and *tensorflow 1.7.1*.
 
-Now install the latest *PyTorch* version together with the *CudaToolkit 10.1*:
+Now install the latest [*PyTorch*](https://pytorch.org/) version together with the *CudaToolkit 10.1*:
 ```python
 conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 ```
@@ -50,14 +64,10 @@ conda install ipykernel jupyter
 jupyter notebook
 ```
 
-The Unity environment is provided by Udacity and can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
+### System Settings
 
-#### Setup conclusion
-
-The project is implemented in `python 3.6` within a `jupyter notebook`. 
-
-* ML framework: **`Pytorch 1.4.0`**
-* CUDA: **`CUDAToolkit 10.1`**
-* Operating system: **`ubuntu 18.04`**
-* Unity environment: **`Banana_Linux/Banana.x86_64`** provided by Udacity
+- Python version: *3.6*
+- PyTorch: *1.4.0 and 1.5.0*
+- Cuda: *CUDAToolkit 10.1*
+- Operating system: *Ubuntu 18.04 and 20.04*
 
