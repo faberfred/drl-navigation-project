@@ -10,8 +10,10 @@ The objective of this project is to *implement* and *compare* two different agen
 
 ![Trained Agent][image1]
 
-Agent one is learning from 37 different signals provided by the environment.
-Agent two is learning from the raw.
+Agent one is learning from 37 input signals provided by the *Unity* environment.
+
+Agent two is learning from raw pixels.
+
 The Unity environments are provided by [Udacity](https://www.udacity.com/). 
 The environment for learning from *input signals* can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
 The environment for learning from *raw pixels* can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip).
