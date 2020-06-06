@@ -2,17 +2,19 @@
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
 
-# Deep-Reinforcement-Learning Projects - Navigation
+# Deep-Reinforcement-Learning Project - Navigation
 
 ### Introduction & goal of the project
 
-The objective of this project is to *implement* and *compare* two different agents with different value functions, that navigate and collect bananas in a large, square *Unity* world. 
+The objective of this project is to *implement* and *compare* three different agents (with different value functions), that navigate and collect bananas in a large, square *Unity* world. 
 
 ![Trained Agent][image1]
 
-Agent one is learning from 37 input signals provided by the *Unity* environment.
+**Agent one** is learning from 37 input signals provided by the *Unity* environment.
 
-Agent two is learning from raw pixels.
+**Agent two** is learning directly from raw pixels of dimension 3 x 84 x 84.
+
+**Agent three** is learning from preprocessed grayscaled pixels of dimension 1 x 84 x 84.
 
 The Unity environments are provided by [Udacity](https://www.udacity.com/). 
 The environment for learning from *input signals* can be downloaded [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
